@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ItemPage from "./ItemPage";
+import Home from "./Home";
+import Beers from "./Beers";
+import Footer from "./Footer";
 
 function App() {
+  const API_URL = "https://api.punkapi.com/v2/";
+  const [reqType, setReqType] = useState("beers");
+  const [items, setItems] = useState([]);
+  const logo = "https://www.brewdog.com/assets/images/logo.svg";
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const response = await fetch(`${API_URL}${reqType}`);
+        const data = await response.json();
+        setItems(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchItems();
+  }, [reqType]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home logo={logo} items={items} />} />
+        <Route path="/beers" element={<Beers items={items} logo={logo} />} />
+        <Route path="/beers/:id" element={<ItemPage items={items} />} />
+      </Routes>
+      <Footer logo={logo} />
+    </Router>
   );
 }
 
