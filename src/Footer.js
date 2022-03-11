@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = ({ logo }) => {
   return (
     <footer>
-      <Link to="/">
+      <Link to="/job-application/">
         <img className="logo" src={logo} />
       </Link>
       <h3>@2022 Brewdog</h3>

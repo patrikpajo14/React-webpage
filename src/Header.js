@@ -8,7 +8,7 @@ const Header = ({ logo, image, text, buttonShow }) => {
     <header>
       <img className="background" src={image} />
       <div className="content">
-        <Link to="/">
+        <Link to="/job-application/">
           <img className="logo" src={logo} />
         </Link>
         <div>
@@ -16,7 +16,7 @@ const Header = ({ logo, image, text, buttonShow }) => {
           <Button
             buttonShow={buttonShow}
             buttonText={buttonText}
-            link={"/beers"}
+            link={"/job-application/beers"}
           />
         </div>
       </div>

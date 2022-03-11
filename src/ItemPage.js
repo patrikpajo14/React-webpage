@@ -14,7 +14,7 @@ const ItemPage = ({ items }) => {
   return (
     <main>
       <header className="item-page-header">
-        <Link to="/">
+        <Link to="/job-application/">
           <img
             className="logo"
             src="https://www.brewdog.com/assets/images/logo.svg"
@@ -37,7 +37,7 @@ const ItemPage = ({ items }) => {
             Brewers tip: <br />
             {item.brewers_tips}
           </p>
-          <Link to={`/beers`} style={linkStyle}>
+          <Link to={`/job-application/beers`} style={linkStyle}>
             Back
           </Link>
         </div>

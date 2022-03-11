@@ -17,7 +17,11 @@ const Beers = ({ items, logo }) => {
         buttonShow={"none"}
       />
       <article className="beers-article">
-        <Button buttonText={buttonText} link={"/"} buttonShow={""} />
+        <Button
+          buttonText={buttonText}
+          link={"/job-application/"}
+          buttonShow={""}
+        />
         <p>Results: 25</p>
       </article>
       <ItemsList items={items} />;
