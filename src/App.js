@@ -28,9 +28,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/job-application/" element={<Home logo={logo} items={items} />} />
-        <Route path="job-application/beers" element={<Beers items={items} logo={logo} />} />
-        <Route path="job-application/beers/:id" element={<ItemPage items={items} />} />
+        <Route path="/" element={<Home logo={logo} items={items} />} />
+        <Route path="/beers" element={<Beers items={items} logo={logo} />} />
+        <Route path="/beers/:id" element={<ItemPage items={items} />} />
       </Routes>
       <Footer logo={logo} />
     </Router>
