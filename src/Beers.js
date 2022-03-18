@@ -19,7 +19,7 @@ const Beers = ({ items, logo }) => {
       <article className="beers-article">
         <Button
           buttonText={buttonText}
-          link={"/job-application/"}
+          link={"/React-webpage/"}
           buttonShow={""}
         />
         <p>Results: 25</p>
