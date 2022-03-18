@@ -29,15 +29,15 @@ function App() {
     <Router>
       <Routes>
         <Route
-          path="/job-application/"
+          path="/React-webpage/"
           element={<Home logo={logo} items={items} />}
         />
         <Route
-          path="/job-application/beers"
+          path="/React-webpage/beers"
           element={<Beers items={items} logo={logo} />}
         />
         <Route
-          path="/job-application/beers/:id"
+          path="/React-webpage/beers/:id"
           element={<ItemPage items={items} />}
         />
       </Routes>
