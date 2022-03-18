@@ -1,7 +1,7 @@
 {
   "name": "job-application",
   "version": "0.1.0",
-  "homepage": "http://patrikpajo14.github.io/job-application",
+  "homepage": "http://patrikpajo14.github.io/React-webpage",
   "private": true,
   "dependencies": {
     "react": "^17.0.2",
