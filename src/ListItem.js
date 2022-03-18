@@ -15,7 +15,7 @@ const ListItem = ({ item }) => {
       <div>
         <h3>{item.name}</h3>
         <p>{item.tagline}</p>
-        <Link to={`/job-application/beers/${item.id}`} style={linkStyle}>
+        <Link to={`/React-webpage/beers/${item.id}`} style={linkStyle}>
           <p>Show details</p>
         </Link>
       </div>
